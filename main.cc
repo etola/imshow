@@ -11,7 +11,6 @@
 // web   : http://www.engintola.com
 //
 // ---------------------------------------------------------------------------
-
 #include <iostream>
 #include <fstream>
 #include <cmath>

@@ -19,6 +19,7 @@
 #include <cstring>
 
 #include <kortex/image.h>
+#include <kortex/image_processing.h>
 #include <kortex/image_gui.h>
 
 using namespace std;
@@ -30,6 +31,8 @@ void display_help() {
     printf(" -o            | original size\n");
     printf(" -w            | window size\n");
 }
+
+void save_stretched( const Image& img, string file );
 
 int main(int argc, char **argv) {
 
@@ -71,10 +74,12 @@ int main(int argc, char **argv) {
 
     Image img;
     img.load( ifile.c_str() );
-    if( ww == -1 ) ww = img.w();
+
+    // img.convert( IT_F_GRAY );
     display( &img, ww );
 
 }
+
 
 // Local Variables:
 // mode: c++
